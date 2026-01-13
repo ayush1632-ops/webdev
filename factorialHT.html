@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+    <style>
+        h4{
+            font-size: 3vw;
+        }
+        
+        body{
+            width: auto;
+            height: 100vh;
+            text-align: center;
+            /* background: linear-gradient(to right, rgb(165, 21, 248), rgb(251, 73, 88)); */
+
+            background: linear-gradient(135deg, #00ffcc, #0066ff);
+
+
+            background-repeat: no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <h1>Factorial Calculator</h1>
+    <br>
+    <h4>to check any number's factorial enter here = </h4>
+    <button id="factbtn"> factorial check </button>
+    <script>
+
+        let button = document.getElementById("factbtn")
+        button.addEventListener("click", ()=>{
+            factorial()
+        })
+
+        function factorial(){
+        let x = prompt(" Enter the number you want factorial of: ")
+        let y=1
+        
+        while (x>1){
+              y=y*x*(x-1)
+              x=x-2
+        }  
+        alert(y) 
+        }
+
+    </script>
+
+
+    <br><br><br><br><br><br><br>
+    <div>
+    factorial = n! = n×(n−1)×(n−2)×...×3×2×1
+    <br><br>
+    (this calculator is able to find factorials upto 170) 
+    </div>
+
+
+</body>
+</html>

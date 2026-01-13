@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Monoton&family=Outfit&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #E2B4BD;
+            /* width: 50vw;
+            height: 100vh;
+            display: block;
+            margin: 0 auto;  */
+            font-family: outfit;
+
+
+        }
+
+
+
+        /* Simple Navbar */
+        .navbar {
+            margin: 0px;
+            width: 95vw;
+            min-width: 500px;
+            background: #161616;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            padding: 0 20px;
+            /* Balanced padding – not shifted */
+            font-family: outfit;
+        }
+
+        #navback {
+            margin-left: auto;
+        }
+
+        .logo {
+            margin-right: 10px;
+            font-size: 22px;
+            font-weight: 50;
+            color: white;
+            font-family: monoton;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: inline-flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+            font-family: outfit;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #39aaf4;
+        }
+        dialog{
+            border: 3px solid rgb(0, 0, 215);
+            border-radius: 20px;
+            background-color: beige;
+            color: blueviolet;
+            
+        }
+
+        dialog button{
+            width: fit-content;
+            height: fit-content;
+            border: 3px solid rgb(29, 29, 223);
+            
+
+        }
+
+        .calculator {
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            width: 260px;
+            height: auto;
+            /* margin: 20px;           this was the wrong line due to which calculator was stuck at start regardless of justify,align center    */
+            padding: 20px;
+            /* border: 2px solid black; */
+            border-radius: 25px;
+            border: 2px solid;
+            background-color: #424B54;
+            input-shadow: 3px 3px 10px 1px #30013d;
+            margin: auto;
+            font-family: outfit;
+
+
+        }
+
+        input[type="text"] {
+            width: 80%;
+            height: 20px;
+            font-size: 24px;
+            text-align: right;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            /* border: 2px solid black; */
+            padding: 20px;
+            border-style: none;
+            background: #7e7b7b;
+            color: white;
+            cursor: text;
+        }
+
+
+        button {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: 3px solid rgb(10, 71, 169);
+            input-shadow: 2px 2px 5px gray;
+        }
+
+        .nonnav {
+            border-radius: 20px;
+            background-color: #66C3FF;
+            width: 100%;
+            min-width: 510px;
+            height: 100vh;
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            padding: 10px;
+
+        }
+
+        .hist {
+            width: 50%;
+            height: 100px;
+            /* margin: 20px; */
+            border: 2px solid black;
+            border-radius: 25px;
+            background-color: rgb(184, 225, 255);
+            text-align: center;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            cursor: pointer;
+            margin: auto;
+            margin-top: 10px;
+
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function deleteLast() {
+            const display = document.getElementById('display');
+            display.value = display.value.slice(0, -1);
+        }
+        if (appendToDisplay(value) == '+') {
+            alert("addition")
+
+        }
+        function handleClick() {
+            calculate();
+            addToHistory();
+        }
+
+        function calculate() {
+            const display = document.getElementById('display');
+            try {
+                display.value = eval(display.value);
+            }
+            catch (e) {
+                display.value = 'Error';
+            }
+        }
+        console.log("now this fuction will add whole equation and result to history");
+
+        function addToHistory() {
+            historyList = document.getElementById('history-list');
+            const display = document.getElementById('display');
+            const listItem = document.createElement('li');
+            listItem.textContent = display.value;
+            historyList.append(listItem);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Calcullor</div>
+        <img src="https://www.svgrepo.com/show/526497/calculator-minimalistic.svg" alt="Logo" class="logo"
+            style="width: 3vw; filter: invert(1) brightness(1)">
+
+        <div id="navback">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" id="openHome">Home</a></li>
+                <li><a href="#" id="openAbout">About</a></li>
+                <li><a href="#" id="openContact">Contact</a></li>
+            </ul>
+            <dialog id="myDialog">
+                <h2>Dialog Box</h2>
+                <p>This is a simple dialog box.</p>
+                <button id="closeBtn">Close</button>
+            </dialog>
+
+            <script>
+
+                const dialog = document.getElementById("myDialog");
+
+                document.getElementById("openAbout").onclick = (e) => {
+                    e.preventDefault();
+                    dialog.showModal();
+                };
+
+                document.getElementById("openContact").onclick = (e) => {
+                    e.preventDefault();
+                    dialog.showModal();
+                };
+
+                document.getElementById("openHome").onclick = (e) => {
+                    e.preventDefault();
+                    dialog.showModal();
+                };
+
+                document.getElementById("closeBtn").onclick = () => {
+                    dialog.close();
+                };
+            </script>
+
+        </div>
+        <div class="hamburger" onclick="toggleMenu()" style="color: white;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <div class="nonnav">
+
+
+        <div class="calculator">
+            <input type="text" id="display">
+
+            <div class="buttons">
+                <button onclick="clearDisplay()" style="border: 3px solid red;">C</button>
+                <button onclick="deleteLast()" style="border: 3px solid gold;">⌫</button>
+                <button onclick="handleClick()" style="width: 110px; border: 3px solid rgb(20, 166, 20);">=</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay(' . ')"> . </button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('0')">0</button>
+
+            </div>
+
+        </div>
+
+        <div class="hist">
+            <p>Calculator History</p>
+            <ul id="history-list">
+
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

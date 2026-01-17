@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Nunito&family=Lora&family=Rubik&family=Fleur De Leah&family=Lobster&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(https://wallpapercave.com/wp/wp6947243.jpg);
+            background-repeat: no-repeat;
+
+            background-size: cover;
+            background-position: center;
+            /* background-color: rgb(238, 226, 255); */
+            filter: brightness(1.1);
+            width: auto;
+            height: 95vh;
+            border: 3px solid black;
+            margin-right: 0.5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            overflow: scroll;
+            min-width: 580px;
+            min-height: 800px;
+            color: beige;
+        }
+
+        #upper {
+            border: 2.5px solid black;
+            border-radius: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 20px;
+            font-family: nunito;
+            background-color: rgba(148, 110, 249, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow:
+                0 0 10px rgb(232, 214, 255);
+        }
+
+        #boxes {
+            /* border: 2px solid black;
+            border-radius: 20px; */
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 95vw;
+            max-width: 800px;
+            min-width: 500px;
+
+            background: rgba(255, 255, 255, 0.2);
+            /* transparent white */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari */
+
+            /* border: 1px solid rgba(255, 255, 255, 0.25); */
+            box-shadow: 0 8px 32px rgba(156, 101, 246, 0.3);
+            border-radius: 20px;
+
+        }
+
+        .box {
+            border: 4px solid rgb(11, 157, 241);
+            padding: 0.5rem;
+            margin: 10px;
+            border-radius: 20px;
+            width: 30vw;
+            min-width: 150px;
+            max-width: 200px;
+            height: 50vh;
+            overflow: auto;
+            display: flexbox;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+
+        }
+
+        h2 {
+            font-family: nunito;
+            font-weight: 300;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        p {
+            font-family: lora;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        img {
+            fill: rgb(245, 200, 200);
+            filter: brightness(0) saturate(100%) invert(100%) sepia(80%) saturate(500%) hue-rotate(180deg);
+        }
+
+        .link {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="upper">
+        <h1>FASHION BRANDS</h1>
+
+    </div>
+
+
+    <div style="display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem;">
+
+        Shop the &nbsp; &nbsp; <p
+            style="margin: 0px;padding: 0px;font-family: Fleur De Leah; font-size: 3rem;color: rgb(236, 207, 128);">
+            Luxury
+        </p>
+    </div>
+
+
+
+    <div id="boxes">
+
+        <a href="https://www.chanel.com/in/fragrance/" class="link">
+            <div class="box"
+                style="  text-shadow: 0 0 8px #f4c323; background-image: url(https://www.chanel.com/puls-img/1759572958876-bottombanner-fr-mobile_3200x3000.jpg); background-size: cover; background-position: center;  ">
+
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/chanel-2-logo-svg-vector.svg" alt="Chanel Logo"
+                    width="100px" height="100px">
+
+                <!-- <h2>CHANEL</h2> -->
+                <p>The definition of Luxury</p>
+            </div>
+        </a>
+
+        <a href="https://www.dior.com/en_int/beauty" class="link">
+            <div class="box"
+                style="  text-shadow: 0 0 8px #c79800; background-image: url(https://cdn.paris-avenues.com/image/cache/catalog/seo50/3348901486385-550x550.jpg); background-size: cover; background-position: center;  ">
+                <img src="https://cdn.worldvectorlogo.com/logos/dior-2.svg" alt="dior Logo" width="140px"
+                    height="100px">
+                <!-- <h2>DIOR</h2> -->
+                <p>The FRENCH perfection.</p>
+            </div>
+        </a>
+
+        <a href="https://www.bulgari.com/en-in/fragrances/bvlgari-man?srsltid=AfmBOopKW8mO5Dm8G_gtSaIg9hr0sIg7mYGYYchBDukN1biT3TWeN7TO" class="link">
+            <div class="box"
+                style=" text-shadow: 0 0 10px rgba(0, 170, 255, 0.8); background-image: url(https://www.edgars.co.za/cdn/shop/files/783320423734_4_1800x1800.jpg?v=1757077949); background-size: cover; background-position: center;  ">
+
+                <div style=" margin-top: 0px;
+            width: auto;
+            height: 95px;
+            object-fit: cover;
+            overflow: hidden;
+            margin-bottom: 4vh;">
+
+                    <img src="https://logoeps.com/wp-content/uploads/2014/01/bvlgari-puor-homme-vector-logo.png"
+                        alt="bvlgari Logo" width="150px" height="auto">
+                </div>
+
+                <!-- <h2>BVLGARI</h2>  -->
+                <p>ITALIAN luxury that completes you </p>
+            </div>
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

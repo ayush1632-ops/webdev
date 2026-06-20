@@ -1,16 +1,9 @@
-# webdev
+This is a Calculator project
 
-Welcome to my GitHub! I’m passionate about creating useful tools, exploring new technologies, and improving a little every day.
+could be accessed at : calcullor.netlify.app
 
-Completed: HTML✅
-           CSS✅
-           JavaScript✅
-           Tailwind CSS✅
 
-🌱 Learning: ( React.js🛠️, Node.js, mongoDB,Next.js)
-
-email-address: ayushyadav1632@gmail.com
-
+uses eval() function 
 
 
 

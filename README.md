@@ -2,12 +2,14 @@
 
 Welcome to my GitHub! I’m passionate about creating useful tools, exploring new technologies, and improving a little every day.
 
-🛠️📲 Currently working on: spotify clone(using html/css) , python
+Completed: HTML✅
+           CSS✅
+           JavaScript✅
+           Tailwind CSS✅
 
-🌱 Learning: ( tailwind CSS, mongoDB, React.js, Node.js)
+🌱 Learning: ( React.js🛠️, Node.js, mongoDB,Next.js)
 
-email: ayushyadav1632@gmail.com
-
+email-address: ayushyadav1632@gmail.com
 
 
 

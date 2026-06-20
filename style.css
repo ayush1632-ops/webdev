@@ -1,0 +1,169 @@
+body {
+    background-color: #E2B4BD;
+
+    height: 100vh;
+    /* display: flex; */
+    flex-direction: column;
+
+    font-family: outfit;
+}
+
+
+/* Simple Navbar */
+.navbar {
+    margin: 0px;
+    width: 95vw;
+    min-width: 500px;
+    background: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding: 0 20px;
+    /* Balanced padding – not shifted */
+    font-family: outfit;
+}
+
+#navback {
+    margin-left: auto;
+}
+
+.logo {
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: 50;
+    color: white;
+    font-family: monoton;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+    font-family: outfit;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #39aaf4;
+}
+
+dialog {
+    translate: 20px;
+
+    width: 250px;
+    padding: 25px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.205);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 211, 130);
+}
+
+dialog button {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+
+    background: rgb(255, 249, 239);
+    border-color: rgb(255, 83, 83);
+    color: black;
+    cursor: pointer;
+
+
+}
+
+.calculator {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: auto;
+    /* margin: 20px;           this was the wrong line due to which calculator was stuck at start regardless of justify,align center    */
+    padding: 20px;
+    /* border: 2px solid black; */
+    border-radius: 25px;
+    border: 2px solid;
+    background-color: #424B54;
+    /* input-shadow: 3px 3px 10px 1px #30013d; */
+    margin: auto;
+    font-family: outfit;
+
+
+}
+
+input[type="text"] {
+    width: 80%;
+    height: 20px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    /* border: 2px solid black; */
+    padding: 20px;
+    border-style: none;
+    background: #7e7b7b;
+    color: white;
+    cursor: text;
+    caret-color: #ffffff;
+
+}
+
+
+button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 3px solid rgb(10, 71, 169);
+    /* input-shadow: 2px 2px 5px gray; */
+}
+
+.nonnav {
+    border-radius: 20px;
+    background-color: rgba(124, 213, 255, 0.975);
+    backdrop-filter: blur(18px) saturate(180%);
+    border: 10px solid rgba(195, 56, 255, 0.511);
+    width: 95vw;
+    min-width: 510px;
+    height: 100vh;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+
+
+}
+
+.hist {
+    width: 40%;
+    height: 150px;
+    /* margin: 20px; */
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: rgb(184, 225, 255);
+    text-align: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 10px;
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Monoton&family=Outfit&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Calcullor</div>
+        <img src="https://www.svgrepo.com/show/526497/calculator-minimalistic.svg" alt="Logo" class="logo"
+            style="width: 3vw; filter: invert(1) brightness(1)">
+
+        <div id="navback">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" id="openHome">Home</a></li>
+                <li><a href="#" id="openAbout">About</a></li>
+                <li><a href="#" id="openContact">Contact</a></li>
+            </ul>
+            <dialog id="myDialog">
+                <h2>Dialog Box</h2>
+                <p>Made by AY</p>
+                <button id="closeBtn">Close</button>
+            </dialog>
+
+            <script>
+
+
+            </script>
+
+        </div>
+        <div class="hamburger" onclick="toggleMenu()" style="color: white;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <div class="nonnav">
+
+
+        <div class="calculator">
+            <input type="text" id="display">
+
+            <div class="buttons">
+                <button onclick="clearDisplay()" style="border: 3px solid red;">C</button>
+                <button onclick="deleteLast()" style="border: 3px solid gold;">⌫</button>
+                <button onclick="handleClick()" style="width: 110px; border: 3px solid rgb(20, 166, 20);">=</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay(' . ')"> . </button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('0')">0</button>
+
+            </div>
+
+        </div>
+
+        <div class="hist">
+            <p>Calculation History</p>
+            <ul id="history-list">
+
+            </ul>
+        </div>
+        <center>
+        <p >If you see jitters on scroll paste this in browser : ( chrome://settings/system ) and turn on graphics acceleration</p>
+        </center>
+    </div>
+
+
+
+</body>
+
+</html>
